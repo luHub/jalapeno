@@ -22,8 +22,8 @@ To install Choreograph download the setup version from archives from
 3)Documentation
 ---------------
 
-[http://doc.aldebaran.com/2-4/software/choregraphe/index.html]
-[https://github.com/luHub/jalapeno/wiki]
+* [http://doc.aldebaran.com/2-4/software/choregraphe/index.html]
+* [https://github.com/luHub/jalapeno/wiki]
 
 4)Project Structure
 -------------------
