@@ -23,6 +23,7 @@ To install Choreograph download the setup version from archives from
 ---------------
 
 [http://doc.aldebaran.com/2-4/software/choregraphe/index.html]
+[https://github.com/luHub/jalapeno/wiki]
 
 4)Project Structure
 -------------------
@@ -32,6 +33,11 @@ To install Choreograph download the setup version from archives from
 * pepper_master (that is the main project)
 * pepper_example_description (tutorials and useful information _move _dialog etc)
 * sample_description  (samples of _music _images etc)
+
+### 4.2)Files Description
+
+* pepper_dialog_example: In this project a dialog is used to command pepper to play music.
+
 
 
 5)Work Methodology
