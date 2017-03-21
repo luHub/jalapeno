@@ -1,0 +1,24 @@
+topic: ~Hello()
+language: enu
+
+# Defining extra concepts out of words or group of words
+#concept:(hello) [hello hi hey "good morning" greetings]
+
+# Catching inputs and triggering outputs
+#u:(e:onStart) $onStopped=1
+
+# Replying to speech
+#u:(~hello) ~hello
+
+#Example 1:
+# User says Hello and Robot responses Hello, Young Padawan
+u:(Hello) Hello, young Padawan
+# User says Good Morning and Robot do the other stuff
+u:(Good morning) Let's start a wonderful day
+
+#Example 2: More Complex Rules
+u:(play music) playing music $play_music=1
+u:(play rock music) playing music $play_rock_music=1
+
+#u:(["tell me" "give me"] your name) of course, my name is NAO
+

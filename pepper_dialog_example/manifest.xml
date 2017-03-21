@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<package uuid="pepper_master-bfd85f" version="0.0.0">
+<package uuid="pepper_dialog_example-e48ccb" version="0.0.0">
  <names>
-  <name lang="en_US">pepper_master</name>
+  <name lang="en_US">pepper_dialog_example</name>
  </names>
  <supportedLanguages>
   <language>en_US</language>
@@ -13,7 +13,13 @@
   <behaviorContent path="behavior_1">
    <userRequestable/>
    <nature>interactive</nature>
+   <triggerSentences/>
+   <loadingResponses/>
+   <autonomous/>
    <permissions/>
   </behaviorContent>
+  <dialogContent typeVersion="1.0" topicName="Hello">
+   <topic language="en_US" path="Hello/Hello_enu.top"/>
+  </dialogContent>
  </contents>
 </package>
