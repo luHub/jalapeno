@@ -1,4 +1,4 @@
-# jalapeno
+# Jalapeno
 # Pepper Robot
 
 1)Updates
