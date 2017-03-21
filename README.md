@@ -6,10 +6,10 @@
 
 ### Update 21/03/2017
 
-Looks like Pepper project it migrating to use Android SDK, which was released
-on March 2016. At this moment qChat fom Android does not support Dutch Language
+Looks like Pepper project its migrating to use Android SDK, which was released
+on March 2016. At this moment qChat for Android does not support Dutch Language,
 because of this reason we deciced to use Choreograph 2.4. We did not use the last
-version 2.5.5 because it is under beta.
+version 2.5.5 because it stills under beta.
 
 2)Project Requirements
 ----------------------
@@ -29,7 +29,7 @@ To install Choreograph download the setup version from archives from
 
 ### 4.1)Project is dived into
 
-* pepper_master (that is the master project)
+* pepper_master (that is the main project)
 * pepper_example_description (tutorials and useful information _move _dialog etc)
 * sample_description  (samples of _music _images etc)
 
