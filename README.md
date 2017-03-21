@@ -33,7 +33,8 @@ pepper_master (that is the master project)
 pepper_example_description (tutorials and useful information _move _dialog etc)
 sample_description  (samples of _music _images etc)
 
-5) Work Methodology
+
+5)Work Methodology
 ------------------- 
 
 Master Branch (Stable Release Final one)
