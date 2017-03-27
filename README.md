@@ -28,7 +28,7 @@ To install Choreograph download the setup version from archives from
 4)Project Structure
 -------------------
 
-### 4.1)Project is dived into
+### 4.1)Project division
 
 * pepper_master (that is the main project)
 * pepper_example_description (tutorials and useful information _move _dialog etc)
