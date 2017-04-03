@@ -1,0 +1,17 @@
+topic: ~GenreDialog()
+language: enu
+
+# Defining extra concepts out of words or group of words
+#concept:(hello) [hello hi hey "good morning" greetings]
+
+# Catching inputs and triggering outputs
+#u:(e:onStart) $onStopped=1
+
+# Replying to speech
+#u:(~hello) ~hello
+
+#u: (_~genre) I am going to play a song from genre $1 .
+proposal:(e:onStart) Great, I have a lot of genres for you! Wat genre do you prefer today? I have A, B and C.
+    u1: (A) I am going to play a song from genre A. $a=1
+    u1: (B) I am going to play a song from genre B. $b=1
+    u1: (C) I am going to play a song from genre C. $c=1

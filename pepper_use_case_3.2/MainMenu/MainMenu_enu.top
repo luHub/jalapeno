@@ -1,0 +1,20 @@
+topic: ~MainMenu()
+language: enu
+
+# Defining extra concepts out of words or group of words
+#concept:(hello) [hello hi hey "good morning" greetings]
+
+# Catching inputs and triggering outputs
+#u:(e:onStart) $onStopped=1
+
+# Replying to speech
+#u:(~hello) ~hello
+
+#concept: (genre) [A B C]
+
+u: (play music) ^goto(genreSelection)
+proposal: %genreSelection Great, I have a lot of genres for you! Wat genre do you prefer today? I have jazz, rock and dixieland.
+    u1: (jazz) I am going to play a song from genre jazz. $jazz=1
+    u1: (rock) I am going to play a song from genre rock. $rock=1
+    u1: (dixieland) I am going to play a song from genre dixie land. $dixieland=1
+u: (stop music) high five $high_five_motion=1 $stop_music=1 ^gotoReactivate(genreSelection)
