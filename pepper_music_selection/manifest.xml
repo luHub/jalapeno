@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<package uuid="pepper_dialog_example-e48ccb" version="0.0.0">
+<package uuid="pepper_music_selection-3cc448" version="0.0.0">
  <names>
-  <name lang="en_US">pepper_dialog_example</name>
+  <name lang="en_US">pepper_music_selection</name>
  </names>
  <supportedLanguages>
   <language>en_US</language>
@@ -13,10 +13,10 @@
   <behaviorContent path="behavior_1">
    <userRequestable/>
    <nature>interactive</nature>
+   <triggerSentences/>
+   <loadingResponses/>
+   <autonomous/>
    <permissions/>
   </behaviorContent>
-  <dialogContent topicName="Hello" typeVersion="1.0">
-   <topic language="en_US" path="Hello/Hello_enu.top"/>
-  </dialogContent>
  </contents>
 </package>

@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<package uuid="pepper_dialog_example-e48ccb" version="0.0.0">
+<package uuid="pepper_dialog_example_input-5c3df9" version="0.0.0">
  <names>
-  <name lang="en_US">pepper_dialog_example</name>
+  <name lang="en_US">pepper_dialog_example_input</name>
  </names>
  <supportedLanguages>
   <language>en_US</language>
