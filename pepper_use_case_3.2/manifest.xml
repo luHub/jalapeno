@@ -10,10 +10,9 @@
   <language>en_US</language>
  </descriptionLanguages>
  <contents>
-  <behaviorContent path="behavior_1">
-   <userRequestable/>
-   <nature>interactive</nature>
-   <permissions/>
-  </behaviorContent>
+  <dialogContent topicName="MainMenu" typeVersion="1.0">
+   <topic path="MainMenu/MainMenu_enu.top" language="en_US"/>
+   <topic path="MainMenu/MainMenu_dun.top" language="nl_NL"/>
+  </dialogContent>
  </contents>
 </package>

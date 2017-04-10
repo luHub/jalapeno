@@ -15,6 +15,12 @@
         <File name="bensound-happyrock" src="sample_music/bensound-happyrock.mp3" />
         <File name="bensound-sexy" src="sample_music/bensound-sexy.mp3" />
         <File name="bensound-sunny" src="sample_music/bensound-sunny.mp3" />
+        <File name="songs" src="behavior_1/songs.json" />
+        <File name="apache" src="behavior_1/songs/apache.ogg" />
+        <File name="georgia" src="behavior_1/songs/georgia.ogg" />
+        <File name="jack" src="behavior_1/songs/jack.ogg" />
+        <File name="riverside" src="behavior_1/songs/riverside.ogg" />
+        <File name="stand" src="behavior_1/songs/stand.ogg" />
     </Resources>
     <Topics>
         <Topic name="ExampleDialog_enu" src="behavior_1/ExampleDialog/ExampleDialog_enu.top" topicName="ExampleDialog" language="en_US" />
@@ -24,4 +30,7 @@
     <IgnoredPaths>
         <Path src=".metadata" />
     </IgnoredPaths>
+    <Translations auto-fill="en_US">
+        <Translation name="translation_en_US" src="translations/translation_en_US.ts" language="en_US" />
+    </Translations>
 </Package>
