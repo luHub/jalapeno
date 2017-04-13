@@ -5,14 +5,16 @@
  </names>
  <supportedLanguages>
   <language>en_US</language>
+  <language>nl_NL</language>
  </supportedLanguages>
  <descriptionLanguages>
   <language>en_US</language>
+  <language>nl_NL</language>
  </descriptionLanguages>
  <contents>
   <dialogContent topicName="MainMenu" typeVersion="1.0">
-   <topic path="MainMenu/MainMenu_enu.top" language="en_US"/>
-   <topic path="MainMenu/MainMenu_dun.top" language="nl_NL"/>
+   <topic language="en_US" path="MainMenu/MainMenu_enu.top"/>
+   <topic language="nl_NL" path="MainMenu/MainMenu_dun.top"/>
   </dialogContent>
  </contents>
 </package>
