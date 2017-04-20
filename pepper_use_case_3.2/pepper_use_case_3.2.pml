@@ -6,7 +6,7 @@
     </BehaviorDescriptions>
     <Dialogs>
         <Dialog name="ExampleDialog" src="behavior_1/ExampleDialog/ExampleDialog.dlg" />
-        <Dialog name="MainMenu" src="MainMenu/MainMenu.dlg" />
+        <Dialog name="MainMenu" src="behavior_1/Jalapino/MainMenu.dlg" />
     </Dialogs>
     <Resources>
         <File name="bensound-creepy" src="sample_music/bensound-creepy.mp3" />
@@ -24,8 +24,7 @@
     </Resources>
     <Topics>
         <Topic name="ExampleDialog_enu" src="behavior_1/ExampleDialog/ExampleDialog_enu.top" topicName="ExampleDialog" language="en_US" />
-        <Topic name="MainMenu_enu" src="MainMenu/MainMenu_enu.top" topicName="MainMenu" language="en_US" />
-        <Topic name="MainMenu_dun" src="MainMenu/MainMenu_dun.top" topicName="MainMenu" language="nl_NL" />
+        <Topic name="MainMenu_enu" src="behavior_1/Jalapino/MainMenu_enu.top" topicName="MainMenu" language="en_US" />
     </Topics>
     <IgnoredPaths>
         <Path src=".metadata" />

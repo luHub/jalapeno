@@ -89,8 +89,8 @@
                             </Parameter>
                             <Resource name="Speech" type="Lock" timeout="0" />
                         </Box>
-                        <Box name="Dialog" id="3" localization="8" tooltip="An example of multilanguage dialog implementation" x="358" y="111">
-                            <dialogFile>../MainMenu/MainMenu.dlg</dialogFile>
+                        <Box name="Dialog" id="3" localization="8" tooltip="An example of multilanguage dialog implementation" x="360" y="48">
+                            <dialogFile>Jalapino/MainMenu.dlg</dialogFile>
                             <bitmap>media/images/box/box-dialog.png</bitmap>
                             <script language="4">
                                 <content>
@@ -104,6 +104,7 @@
                             <Output name="playGenre" type="3" type_size="1" nature="2" inner="0" tooltip="" id="5" />
                             <Output name="stop_music" type="1" type_size="1" nature="2" inner="0" tooltip="" id="6" />
                             <Output name="high_five_motion" type="1" type_size="1" nature="2" inner="0" tooltip="" id="7" />
+                            <Output name="next_song" type="1" type_size="1" nature="2" inner="0" tooltip="" id="8" />
                             <Resource name="Speech" type="Lock" timeout="0" />
                             <Resource name="Speech recognition" type="Lock" timeout="0" />
                         </Box>
@@ -243,7 +244,7 @@
                                 </ActuatorList>
                             </Timeline>
                         </Box>
-                        <Box name="genreSelect" id="8" localization="8" tooltip="" x="593" y="24">
+                        <Box name="genreSelect" id="8" localization="8" tooltip="" x="687" y="13">
                             <bitmap>media/images/box/box-python-script.png</bitmap>
                             <script language="4">
                                 <content>
@@ -252,6 +253,7 @@
         GeneratedClass.__init__(self)
         self.player = ALProxy('ALAudioPlayer')
         self.audio_path = ""
+        self.index = 0
 
     def onLoad(self):
         #put initialization code here
@@ -259,7 +261,8 @@
         self.ids = []
         pass
 
-    def onUnload(self):
+
+    def stop(self):
         #put clean-up code here
         self.logger.info("trying to stop")
         for id in self.ids:
@@ -273,37 +276,54 @@
                 pass
         while( self.bIsRunning ):
             time.sleep( 0.2 )
+
+    def onUnload(self):
+        pass
         #ALProxy("ALAudioPlayer").stopAll()
         #ALProxy("ALAudioPlayer").unloadAllfiles()
+
+    def onInput_next(self):
+        self.stop()
+
+        self.index = self.index + 1
+
+        if self.index < len(self.filtered_array):
+            self.play()
+        else:
+            self.tts.say("There are no more songs in the playlist.")
+            self.onInput_onStop()
+        pass
 
     def onInput_onStart(self, p):
         genre= str(p)
 
         # Read all songs from JSON file
         import json
-
         # self.logger.info("----- READING FILE --------")
         path = os.path.join(self.behaviorAbsolutePath(), 'songs.json')
         with open(path) as json_data:
             array = json.loads(json_data.read())
             # self.logger.info(array)
-        # self.logger.info(array)
-
-
+            # self.logger.info(array)
         # self.logger.info("----- FILTERING --------")
         # Filter array on genre parameter
-        filtered_array = [x for x in array if x['genre'] == genre]
-        length = len(filtered_array)
+        self.filtered_array = [x for x in array if x['genre'] == genre]
+        length = len(self.filtered_array)
 
         self.tts = ALProxy('ALTextToSpeech')
-        self.tts.say("I found " + str(length) + " songs in the genre " + genre + ".")
-
+        self.tts.say("There are " + str(length) + " songs in the playlist " + genre + ".")
+        self.index = 0
         # Pick random song from filtered array
-        import random
-        song = random.choice(filtered_array)
+
         # self.logger.info("----- PICKING SONG --------")
         # self.logger.info(song)
 
+        self.play()
+        pass
+
+
+    def play(self):
+        song = self.filtered_array[self.index]
         # Extract song specifics
         title = str(song.get('title'))
         artist = str(song.get('artist'))
@@ -330,6 +350,7 @@
                 self.bIsRunning = False
 
     def onInput_onStop(self):
+        self.stop()
         self.onUnload() #it is recommended to reuse the clean-up as the box is stopped
         # self.onStopped() #activate the output of the box]]>
 </content>
@@ -337,7 +358,8 @@
                             <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                             <Input name="onStart" type="0" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
                             <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
-                            <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
+                            <Input name="next" type="1" type_size="1" nature="1" inner="0" tooltip="" id="4" />
+                            <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="5" />
                         </Box>
                         <Box name="Play Sound" id="1" localization="8" tooltip="Play a sound file. Select the file in parameters. The format of the file can be wav or ogg (on virtual robot) and also mp3 (on a real robot).&#x0A;&#x0A;Note: There can be some delay to play ogg or mp3 (on a robot) files. We advise you to use wav if&#x0A;you want a fast play of the file." x="842" y="145">
                             <bitmap>media/images/box/interaction/play_music.png</bitmap>
@@ -465,6 +487,7 @@ class MyClass(GeneratedClass):
                         <Link inputowner="8" indexofinput="3" outputowner="3" indexofoutput="6" />
                         <Link inputowner="3" indexofinput="2" outputowner="2" indexofoutput="3" />
                         <Link inputowner="2" indexofinput="2" outputowner="0" indexofoutput="2" />
+                        <Link inputowner="8" indexofinput="4" outputowner="3" indexofoutput="8" />
                     </Diagram>
                 </BehaviorKeyframe>
             </BehaviorLayer>

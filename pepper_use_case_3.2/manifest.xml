@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<package version="0.0.0" uuid="pepper_use_case_32-f27911">
+<package uuid="pepper_use_case_32-f27911" version="0.0.0">
  <names>
   <name lang="en_US">pepper_use_case_3.2</name>
  </names>
@@ -12,9 +12,9 @@
   <language>nl_NL</language>
  </descriptionLanguages>
  <contents>
-  <dialogContent topicName="MainMenu" typeVersion="1.0">
-   <topic language="en_US" path="MainMenu/MainMenu_enu.top"/>
-   <topic language="nl_NL" path="MainMenu/MainMenu_dun.top"/>
-  </dialogContent>
+  <behaviorContent path="behavior_1">
+   <nature>interactive</nature>
+   <permissions/>
+  </behaviorContent>
  </contents>
 </package>
