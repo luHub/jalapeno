@@ -6,22 +6,29 @@
     </BehaviorDescriptions>
     <Dialogs>
         <Dialog name="ExampleDialog" src="behavior_1/ExampleDialog/ExampleDialog.dlg" />
-        <Dialog name="MainMenu" src="MainMenu/MainMenu.dlg" />
+        <Dialog name="MainMenu" src="behavior_1/Jalapino/MainMenu.dlg" />
     </Dialogs>
     <Resources>
-        <File name="bensound-creepy" src="sample_music/bensound-creepy.mp3" />
-        <File name="bensound-energy" src="sample_music/bensound-energy.mp3" />
-        <File name="bensound-goinghigher" src="sample_music/bensound-goinghigher.mp3" />
-        <File name="bensound-happyrock" src="sample_music/bensound-happyrock.mp3" />
-        <File name="bensound-sexy" src="sample_music/bensound-sexy.mp3" />
-        <File name="bensound-sunny" src="sample_music/bensound-sunny.mp3" />
+        <File name="songs" src="behavior_1/songs.json" />
+        <File name="apache" src="behavior_1/songs/apache.ogg" />
+        <File name="georgia" src="behavior_1/songs/georgia.ogg" />
+        <File name="jack" src="behavior_1/songs/jack.ogg" />
+        <File name="riverside" src="behavior_1/songs/riverside.ogg" />
+        <File name="stand" src="behavior_1/songs/stand.ogg" />
+        <File name="genre" src="html/genre.html" />
+        <File name="index" src="html/index.html" />
+        <File name="play" src="html/play.html" />
+        <File name="style" src="html/style.css" />
     </Resources>
     <Topics>
         <Topic name="ExampleDialog_enu" src="behavior_1/ExampleDialog/ExampleDialog_enu.top" topicName="ExampleDialog" language="en_US" />
-        <Topic name="MainMenu_enu" src="MainMenu/MainMenu_enu.top" topicName="MainMenu" language="en_US" />
-        <Topic name="MainMenu_dun" src="MainMenu/MainMenu_dun.top" topicName="MainMenu" language="nl_NL" />
+        <Topic name="MainMenu_enu" src="behavior_1/Jalapino/MainMenu_enu.top" topicName="MainMenu" language="en_US" />
     </Topics>
     <IgnoredPaths>
         <Path src=".metadata" />
     </IgnoredPaths>
+    <Translations auto-fill="en_US">
+        <Translation name="translation_en_US" src="translations/translation_en_US.ts" language="en_US" />
+        <Translation name="translation_nl_NL" src="translations/translation_nl_NL.ts" language="nl_NL" />
+    </Translations>
 </Package>

@@ -1,0 +1,30 @@
+	[{
+		"title": "Apache",
+		"artist": "The Shadows",
+		"genre": "rock",
+		"location": "apache.ogg"
+	}, 
+	{
+		"title": "Stand by Me",
+		"artist": "Benjamin E King",
+		"genre": "blues",
+		"location": "stand.ogg"
+	},	
+	{	
+		"title": "Georga on my Mind",
+		"artist": "Ray Charles",
+		"genre": "blues",
+		"location": "georgia.ogg"
+	}, 
+	{	
+		"title": "Hit the road Jack",
+		"artist": "Ray Charles",
+		"genre": "blues",
+		"location": "jack.ogg"
+	}, 
+	{
+		"title": "Down by the Riverside",
+		"artist": "Dukes of Dixieland",
+		"genre": "dixieland",
+		"location": "riverside.ogg"
+	}]
