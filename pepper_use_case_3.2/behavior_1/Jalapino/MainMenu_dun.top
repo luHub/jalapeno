@@ -1,0 +1,32 @@
+topic: ~MainMenu()
+language: dun
+
+# Defining extra concepts out of words or group of words
+concept:(hello) [hallo hi hey goedemorgen morgen goedemiddag goedenavond gegroet]
+
+# Catching inputs and triggering outputs
+#u:(e:onStart) $onStopped=1
+
+# Replying to speech
+u:(~hello) ~hello
+
+#concept: (genre) [A B C]
+
+concept:(play) ["speel muziek" "speel de muziek" "speel mijn muziek" afspelen "muziek luisteren" muziek "muziek afspelen" "muziek spelen" "muziek horen"]
+concept:(stop) ["stop muziek" "stop de muziek" "stop mijn muziek" stop "stop met afspelen" "stop afspelen" "stop met het afspelen" "muziek stoppen" "niet meer luisteren" "klaar met luisteren" klaar met naar de muziek luisteren "klaar met de muziek" "stop spelen" "stop met spelen" "stop met het spelen" "klaar me" "stoppen"]
+concept:(next) [volgende "volgende nummer" "ander nummer luisteren" "ander nummer afspelen" "ander nummer" "volgend lied" "ander lied" "ander lied luisteren" "ander lied luisteren" "ander lied afspelen"]
+
+u: (_~play) Oké, laten we wat muziek afspelen. $show_playlists=1 ^gotoReactivate(genreSelection)
+proposal: %genreSelection Ik heb een aantal afspeellijsten voor u. Welke afspeellijst wilt u vandaag horen? Ik heb de lijsten blues, rock en dixieland.
+    u1: (blues) $playGenre="blues"
+    u1: (rock)  $playGenre="rock"
+    u1: (dixieland) $playGenre="dixieland"
+
+u: (_~stop) Oké, ik stop de muziek $stop_music=1
+
+u: (_~next) Oké $next_song=1
+
+u: (high five) high five $high_five_motion=1 
+
+
+ 
