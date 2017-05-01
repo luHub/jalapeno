@@ -19,10 +19,12 @@
         <File name="index" src="html/index.html" />
         <File name="play" src="html/play.html" />
         <File name="style" src="html/style.css" />
+
     </Resources>
     <Topics>
         <Topic name="ExampleDialog_enu" src="behavior_1/ExampleDialog/ExampleDialog_enu.top" topicName="ExampleDialog" language="en_US" />
         <Topic name="MainMenu_enu" src="behavior_1/Jalapino/MainMenu_enu.top" topicName="MainMenu" language="en_US" />
+        <Topic name="MainMenu_dun" src="behavior_1/Jalapino/MainMenu_dun.top" topicName="MainMenu" language="nl_NL" />
     </Topics>
     <IgnoredPaths>
         <Path src=".metadata" />
