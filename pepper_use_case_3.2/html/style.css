@@ -10,6 +10,8 @@ h1 {
 	height: 260px;
 	line-height: 260px;
 	border: 10px solid black;
+	border-radius: 25px;
 	margin: 50px;
+	background: #8efefe;
 	
 }

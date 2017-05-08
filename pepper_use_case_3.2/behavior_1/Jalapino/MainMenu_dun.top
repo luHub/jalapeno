@@ -13,14 +13,17 @@ u:(~hello) ~hello
 #concept: (genre) [A B C]
 
 concept:(play) ["speel muziek" "speel de muziek" "speel mijn muziek" afspelen "muziek luisteren" muziek "muziek afspelen" "muziek spelen" "muziek horen"]
-concept:(stop) ["stop muziek" "stop de muziek" "stop mijn muziek" stop "stop met afspelen" "stop afspelen" "stop met het afspelen" "muziek stoppen" "niet meer luisteren" "klaar met luisteren" klaar met naar de muziek luisteren "klaar met de muziek" "stop spelen" "stop met spelen" "stop met het spelen" "klaar me" "stoppen"]
+concept:(stop) ["stop muziek" "stop de muziek" "stop mijn muziek" stop "stop met afspelen" "stop afspelen" "stop met het afspelen" "muziek stoppen" "niet meer luisteren" "klaar met luisteren" "klaar met naar de muziek luisteren" "klaar met de muziek" "stop spelen" "stop met spelen" "stop met het spelen" "klaar met" klaar "stoppen"]
 concept:(next) [volgende "volgende nummer" "ander nummer luisteren" "ander nummer afspelen" "ander nummer" "volgend lied" "ander lied" "ander lied luisteren" "ander lied luisteren" "ander lied afspelen"]
+concept:(help) [help hulp "ik wil hulp" "help pepper" "wil hulp" "ik heb hulp nodig" "help me"  "help mij"]
 
 u: (_~play) Oké, laten we wat muziek afspelen. $show_playlists=1 ^gotoReactivate(genreSelection)
 proposal: %genreSelection Ik heb een aantal afspeellijsten voor u. Welke afspeellijst wilt u vandaag horen? Ik heb de lijsten blues, rock en dixieland.
     u1: (blues) $playGenre="blues"
     u1: (rock)  $playGenre="rock"
     u1: (dixieland) $playGenre="dixieland"
+    u1: (_~help) U zit nu in het afspeellijst menu. U kunt een naam van een afspellijst noemen om de muziek te starten. U kunt ook terug gaan naar het hoofdmenu. ^gotoReactivate(genreSeletion)
+    u1: (terug) Oké we gaan terug naar het hoofdmenu. $mainmenu=1
 
 u: (_~stop) Oké, ik stop de muziek $stop_music=1
 
@@ -28,5 +31,6 @@ u: (_~next) Oké $next_song=1
 
 u: (high five) high five $high_five_motion=1 
 
+u: (introductie) Hallo, mijn naam is Pèpper. Ik ben hier vandaag om muziek met u af te spelen. Op het scherm op mijn buik kunt u verschillende opties zien. Iedere keer kunt u daaruit kiezen. Probeer vandaag verschillende nummers en afspeellijsten te beluisteren. Als u het even niet meer weet kunt u altijd om hulp vragen.
 
- 
+u: (_~help) $stop_music=1 U bent nu in het hoofdmenu. U kunt muziek afspelen of mij een high five geven.
