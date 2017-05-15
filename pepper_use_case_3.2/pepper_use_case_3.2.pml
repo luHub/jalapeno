@@ -7,6 +7,7 @@
     <Dialogs>
         <Dialog name="ExampleDialog" src="behavior_1/ExampleDialog/ExampleDialog.dlg" />
         <Dialog name="MainMenu" src="behavior_1/Jalapino/MainMenu.dlg" />
+        <Dialog name="Playlists" src="Playlists/Playlists.dlg" />
     </Dialogs>
     <Resources>
         <File name="songs" src="behavior_1/songs.json" />
@@ -24,6 +25,7 @@
         <Topic name="ExampleDialog_enu" src="behavior_1/ExampleDialog/ExampleDialog_enu.top" topicName="ExampleDialog" language="en_US" />
         <Topic name="MainMenu_enu" src="behavior_1/Jalapino/MainMenu_enu.top" topicName="MainMenu" language="en_US" />
         <Topic name="MainMenu_dun" src="behavior_1/Jalapino/MainMenu_dun.top" topicName="MainMenu" language="nl_NL" />
+        <Topic name="Playlists_dun" src="Playlists/Playlists_dun.top" topicName="Playlists" language="nl_NL" />
     </Topics>
     <IgnoredPaths>
         <Path src=".metadata" />
