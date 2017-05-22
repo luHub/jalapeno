@@ -13,24 +13,31 @@ u:(~hello) ~hello
 #concept: (genre) [A B C]
 
 concept:(play) ["speel muziek" "speel de muziek" "speel mijn muziek" afspelen "muziek luisteren" muziek "muziek afspelen" "muziek spelen" "muziek horen"]
-concept:(stop) ["stop muziek" "stop de muziek" "stop mijn muziek" stop "stop met afspelen" "stop afspelen" "stop met het afspelen" "muziek stoppen" "niet meer luisteren" "klaar met luisteren" "klaar met naar de muziek luisteren" "klaar met de muziek" "stop spelen" "stop met spelen" "stop met het spelen" "klaar met" klaar "stoppen"]
+concept:(stop) ["stop muziek" "stop de muziek" "stop mijn muziek" "stop met afspelen" "stop afspelen" "stop met het afspelen" "muziek stoppen" "niet meer luisteren" "klaar met luisteren" "klaar met naar de muziek luisteren" "klaar met de muziek" "stop spelen" "stop met spelen" "stop met het spelen" "klaar met" klaar "stoppen"]
 concept:(next) [volgende "volgende nummer" "ander nummer luisteren" "ander nummer afspelen" "ander nummer" "volgend lied" "ander lied" "ander lied luisteren" "ander lied luisteren" "ander lied afspelen"]
-concept:(help) [help hulp "ik wil hulp" "help pepper" "wil hulp" "ik heb hulp nodig" "help me"  "help mij"]
+concept:(help) ["ik wil hulp" "help pepper" "wil hulp" "ik heb hulp nodig" "help me"  "help mij"]
+concept:(dixie) [dixie dixieland]
+
+
 
 u: (_~play) Oké, laten we wat muziek afspelen. $show_playlists=1 ^gotoReactivate(genreSelection)
+
 proposal: %genreSelection Ik heb een aantal afspeellijsten voor u. Welke afspeellijst wilt u vandaag horen? Ik heb de lijsten vrolijk, nostalgie en engelstalig.
-    u1: (vrolijk) $playGenre="vrolijk"
-    u1: (nostalgie)  $playGenre="nostalgie"
-    u1: (engelstalig) $playGenre="engelstalig"
+    u1: (vrolijk) $playGenre="vrolijk" ^gotoReactivate(playing)
+    u1: (nostalgie)  $playGenre="nostalgie" ^gotoReactivate(playing)
+    u1: (engelstalig) $playGenre="engelstalig" ^gotoReactivate(playing)
     u1: (_~help) U zit nu in het afspeellijst menu. U kunt een naam van een afspellijst noemen om de muziek te starten. U kunt ook terug gaan naar het hoofdmenu. ^gotoReactivate(genreSeletion)
     u1: (terug) Oké we gaan terug naar het hoofdmenu. $mainmenu=1
 
-u: (_~stop) Oké, ik stop de muziek $stop_music=1
+    
+proposal: %playing
+    u1: (_~stop) Oké, ik stop de muziek $stop_music=1
+    u1: (_~next) Oké $next_song=1  ^gotoReactivate(playing)
+    u1: (_~help) We zijn nu muziek aan het afspelen. U kunt stoppen door stop muziek te zeggen, of naar het volgende nummer gaan door volgende te zeggen. ^gotoReactivate(playing)
 
-u: (_~next) Oké $next_song=1
+u: (JLhsafasfasfasgagbsndakjeb) high five $high_five_motion=1 
 
-u: (high five) high five $high_five_motion=1 
+u: (introductie) Hallo, mijn naam is Pèpper. Ik ben hier vandaag om muziek met u af te spelen. Op het scherm op mijn buik kunt u verschillende opties zien. Iedere keer kunt u daaruit kiezen. Probeer vandaag verschillende nummers en afspeellijsten te beluisteren. Als u het even niet meer weet kunt u altijd om hulp vragen. Zeg nu speel muziek om te beginnen.
 
-u: (introductie) Hallo, mijn naam is Pèpper. Ik ben hier vandaag om muziek met u af te spelen. Op het scherm op mijn buik kunt u verschillende opties zien. Iedere keer kunt u daaruit kiezen. Probeer vandaag verschillende nummers en afspeellijsten te beluisteren. Als u het even niet meer weet kunt u altijd om hulp vragen.
+u: (_~help) U bent nu in het hoofdmenu. U kunt muziek afspelen door speel muziek te zeggen.
 
-u: (_~help) $stop_music=1 U bent nu in het hoofdmenu. U kunt muziek afspelen of mij een high five geven.

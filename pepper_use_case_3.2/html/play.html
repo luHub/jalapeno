@@ -4,9 +4,36 @@
 <title>Test page</title></head>
 <body>
 <span>
+<h1 id="title" style="color: #8efefe; background: black;">Placeholder</h1>
 <h1> Volgende  </h1>
-<h1> Stop  </h1>
-<h1> Help </h1>
+<h1> Stop Muziek  </h1>
+<h1 > Help Pepper </h1>
 </span>
+
+<script>
+	function parseURLParams(url) {
+		var queryStart = url.indexOf("?") + 1,
+			queryEnd   = url.indexOf("#") + 1 || url.length + 1,
+			query = url.slice(queryStart, queryEnd - 1),
+        pairs = query.replace(/\+/g, " ").split("&"),
+        parms = {}, i, n, v, nv;
+
+    if (query === url || query === "") return;
+
+    for (i = 0; i < pairs.length; i++) {
+        nv = pairs[i].split("=", 2);
+        n = decodeURIComponent(nv[0]);
+        v = decodeURIComponent(nv[1]);
+
+        if (!parms.hasOwnProperty(n)) parms[n] = [];
+        parms[n].push(nv.length === 2 ? v : null);
+    }
+    return parms;
+}
+
+var parms = parseURLParams(window.location.search);
+var title = parms.name;
+document.getElementById("title").innerHTML = title;
+</script>
 </body>
 </html>
