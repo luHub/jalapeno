@@ -19,6 +19,13 @@
         <File name="index" src="html/index.html" />
         <File name="play" src="html/play.html" />
         <File name="style" src="html/style.css" />
+        <File name="De-Glimlach-Van-Een-Kind" src="behavior_1/songs/De-Glimlach-Van-Een-Kind.ogg" />
+        <File name="Je-Bent-Niet-Hip" src="behavior_1/songs/Je-Bent-Niet-Hip.ogg" />
+        <File name="Kom-Van-Dat-Dak-Af" src="behavior_1/songs/Kom-Van-Dat-Dak-Af.ogg" />
+        <File name="Mama" src="behavior_1/songs/Mama.ogg" />
+        <File name="Mexico" src="behavior_1/songs/Mexico.ogg" />
+        <File name="Ritme-van-de-regen" src="behavior_1/songs/Ritme-van-de-regen.ogg" />
+        <File name="Rocking-Billy" src="behavior_1/songs/Rocking-Billy.ogg" />
     </Resources>
     <Topics>
         <Topic name="ExampleDialog_enu" src="behavior_1/ExampleDialog/ExampleDialog_enu.top" topicName="ExampleDialog" language="en_US" />

@@ -1,30 +1,71 @@
 	[{
 		"title": "Apache",
 		"artist": "The Shadows",
-		"genre": "rock",
+		"genre": "engelstalig",
 		"location": "apache.ogg"
 	}, 
 	{
 		"title": "Stand by Me",
 		"artist": "Benjamin E King",
-		"genre": "blues",
+		"genre": "engelstalig",
 		"location": "stand.ogg"
 	},	
 	{	
 		"title": "Georga on my Mind",
 		"artist": "Ray Charles",
-		"genre": "blues",
+		"genre": "engelstalig",
 		"location": "georgia.ogg"
 	}, 
 	{	
 		"title": "Hit the road Jack",
 		"artist": "Ray Charles",
-		"genre": "blues",
+		"genre": "engelstalig",
 		"location": "jack.ogg"
 	}, 
 	{
 		"title": "Down by the Riverside",
 		"artist": "Dukes of Dixieland",
-		"genre": "dixieland",
+		"genre": "engelstalig",
 		"location": "riverside.ogg"
+	},
+	{
+		"title": "Kom van dat dak af",
+		"artist": "Peter Koelewijn",
+		"genre": "vrolijk",
+		"location": "Kom-Van-Dat-Dak-Af.ogg"
+	},
+	{
+		"title": "Mexico",
+		"artist": "Zangeres zonder naam",
+		"genre": "vrolijk",
+		"location": "Mexico.ogg"
+	},
+	{
+		"title": "Rocking Billy",
+		"artist": "Ria Valk",
+		"genre": "vrolijk",
+		"location": "Rocking-Billy.ogg"
+	},
+	{
+		"title": "Je bent niet hip",
+		"artist": "Patricia Paay",
+		"genre": "vrolijk",
+		"location": "Je-Bent-Niet-Hip.ogg"
+	},
+	{
+		"title": "De glimlach van een kind",
+		"artist": "Willy Alberti",
+		"genre": "nostalgie",
+		"location": "De-Glimlach-Van-Een-Kind.ogg"
+	},
+		"title": "Mama",
+		"artist": "Heintje",
+		"genre": "nostalgie",
+		"location": "Mama.ogg"
+	},
+	{
+		"title": "Ritme van de regen",
+		"artist": "Rob de Nijs",
+		"genre": "nostalgie",
+		"location": "Ritme-van-de-regen.ogg"		
 	}]
