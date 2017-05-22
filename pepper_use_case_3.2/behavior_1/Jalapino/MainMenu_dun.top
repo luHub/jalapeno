@@ -22,10 +22,10 @@ concept:(dixie) [dixie dixieland]
 
 u: (_~play) Oké, laten we wat muziek afspelen. $show_playlists=1 ^gotoReactivate(genreSelection)
 
-proposal: %genreSelection Ik heb een aantal afspeellijsten voor u. Welke afspeellijst wilt u vandaag horen? Ik heb de lijsten vrolijk, nostalgie en engelstalig.
+proposal: %genreSelection Ik heb een aantal afspeellijsten voor u. Welke afspeellijst wilt u vandaag horen? Ik heb de lijsten vrolijk, nostalgie en instrumentaal.
     u1: (vrolijk) $playGenre="vrolijk" ^gotoReactivate(playing)
     u1: (nostalgie)  $playGenre="nostalgie" ^gotoReactivate(playing)
-    u1: (engelstalig) $playGenre="engelstalig" ^gotoReactivate(playing)
+    u1: (instrumentaal) $playGenre="instrumentaal" ^gotoReactivate(playing)
     u1: (_~help) U zit nu in het afspeellijst menu. U kunt een naam van een afspellijst noemen om de muziek te starten. U kunt ook terug gaan naar het hoofdmenu. ^gotoReactivate(genreSeletion)
     u1: (terug) Oké we gaan terug naar het hoofdmenu. $mainmenu=1
 

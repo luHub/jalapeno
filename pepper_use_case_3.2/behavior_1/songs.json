@@ -1,7 +1,13 @@
 	[{
+		"title": "Down by the Riverside",
+		"artist": "Dukes of Dixieland",
+		"genre": "instrumentaal",
+		"location": "riverside.ogg"
+	},
+	{
 		"title": "Apache",
 		"artist": "The Shadows",
-		"genre": "engelstalig",
+		"genre": "instrumentaal",
 		"location": "apache.ogg"
 	}, 
 	{
@@ -22,12 +28,6 @@
 		"genre": "engelstalig",
 		"location": "jack.ogg"
 	}, 
-	{
-		"title": "Down by the Riverside",
-		"artist": "Dukes of Dixieland",
-		"genre": "engelstalig",
-		"location": "riverside.ogg"
-	},
 	{
 		"title": "Kom van dat dak af",
 		"artist": "Peter Koelewijn",
@@ -50,7 +50,7 @@
 		"title": "Je bent niet hip",
 		"artist": "Patricia Paay",
 		"genre": "vrolijk",
-		"location": "Je-Bent-Niet-Hip.ogg"
+		"location": "Niet-Hip.ogg"
 	},
 	{
 		"title": "De glimlach van een kind",
@@ -58,10 +58,11 @@
 		"genre": "nostalgie",
 		"location": "De-Glimlach-Van-Een-Kind.ogg"
 	},
+	{
 		"title": "Mama",
 		"artist": "Heintje",
 		"genre": "nostalgie",
-		"location": "Mama.ogg"
+		"location": "Mama-Heintje.ogg"
 	},
 	{
 		"title": "Ritme van de regen",

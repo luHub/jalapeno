@@ -120,6 +120,7 @@
         # Extract song specifics
         title = str(song.get('title'))
         artist = str(song.get('artist'))
+        self.logger.info(str(song.get('location')))
         self.location = 'songs/' + str(song.get('location'))
 
         self.tts.say("Ik ga nu het nummer " + title + " van " + artist + " voor u afspelen.")
